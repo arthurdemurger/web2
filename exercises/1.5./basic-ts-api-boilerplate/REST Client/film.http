@@ -1,0 +1,38 @@
+@baseUrl = http://localhost:3000
+### Post new film
+POST {{baseUrl}}/films
+Content-Type: application/json
+
+{
+	"title": "Arthur and The Invisibles",
+	"director": "Luc Besson",
+	"duration": 94,
+	"budget": 1000000,
+	"description": "Ten-year-old Arthur, in a bid to save his grandfather's house from being demolished, goes looking for some much-fabled hidden treasure in the land of the Minimoys, tiny people living in harmony with nature.",
+	"imageUrl": "https://www.imdb.com/title/tt0344854/mediaviewer/rm121236481/?ref_=tt_ov_i"
+}
+
+### Delete a film
+DELETE {{baseUrl}}/films/2
+
+
+### Update the drink identified by 5
+PATCH {{baseUrl}}/films/3
+Content-Type: application/json
+
+{
+    "title":"Night"
+}
+
+### Update or create a film
+PUT http://localhost:3000/films/5
+Content-Type: application/json
+
+{
+  "title": "New Title",
+  "director": "New Director",
+  "duration": 120,
+  "budget": 5000000,
+  "description": "Updated or newly created film description.",
+  "imageUrl": "https://newimageurl.com"
+}
