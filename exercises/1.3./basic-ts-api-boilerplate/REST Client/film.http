@@ -1,0 +1,12 @@
+### Post new film
+POST http://localhost:3000/films
+Content-Type: application/json
+
+{
+	"title": "Arthur and The Invisibles",
+	"director": "Luc Besson",
+	"duration": 94,
+	"budget": 1000000,
+	"description": "Ten-year-old Arthur, in a bid to save his grandfather's house from being demolished, goes looking for some much-fabled hidden treasure in the land of the Minimoys, tiny people living in harmony with nature.",
+	"imageUrl": "https://www.imdb.com/title/tt0344854/mediaviewer/rm121236481/?ref_=tt_ov_i"
+}
