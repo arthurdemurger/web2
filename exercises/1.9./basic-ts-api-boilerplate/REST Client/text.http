@@ -1,0 +1,21 @@
+@baseUrl = http://localhost:3000
+### Post new text
+POST {{baseUrl}}/texts
+Content-Type: application/json
+
+{
+	"content": "Arthur and The Invisibles",
+	"level": "easy"
+}
+
+### Delete a text
+DELETE {{baseUrl}}/texts/
+
+### Update or create a text
+PUT http://localhost:3000/texts/733cf3c6-03f9-429e-984a-09d0a718ac53
+Content-Type: application/json
+
+{
+  "content": "New Title",
+  "level": "hard"
+}
