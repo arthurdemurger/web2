@@ -1,0 +1,25 @@
+header {
+	background-color: var(--primary-color);
+	padding: 20px;
+	text-align: center;
+	border-bottom: 1px solid var(--secondary-color);
+}
+
+header h1 {
+	margin: 0;
+	font-size: 2em;
+	color: var(--light-color);
+}
+
+header div {
+	margin-top: 10px;
+	font-size: 1em;
+	color: var(--light-color);
+}
+
+header img {
+	margin-top: 15px;
+	max-width: 150px;
+	height: auto;
+	border-radius: 5px;
+}

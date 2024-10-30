@@ -1,0 +1,25 @@
+footer {
+	background-color: var(--primary-color); /* Updated to match the theme */
+	padding: 20px;
+	text-align: center;
+	border-top: 1px solid #e9ecef;
+}
+
+footer h3 {
+	margin: 0;
+	font-size: 1.5em;
+	color: var(--light-color); /* Updated to match the theme */
+}
+
+footer div {
+	margin-top: 10px;
+	font-size: 1em;
+	color: var(--secondary-color); /* Updated to match the theme */
+}
+
+footer img {
+	margin-top: 15px;
+	max-width: 100px;
+	height: auto;
+	border-radius: 5px;
+}
