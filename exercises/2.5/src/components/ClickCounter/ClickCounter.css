@@ -1,0 +1,47 @@
+.card {
+	padding: 20px;
+	margin: 20px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	text-align: center;
+}
+
+.card h2 {
+	font-size: 1.5em;
+	margin-bottom: 20px;
+}
+
+.card button {
+	padding: 10px 20px;
+	margin-top: 10px;
+	font-size: 1em;
+	color: #fff;
+	background-color: var(--dark-color);
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+}
+
+.card button .mouse-message {
+	margin-bottom: 10px;
+	font-size: 0.9em;
+	color: var(--secondary-color);
+}
+
+.card button .clickable-area {
+	padding: 5px 10px;
+	background-color: var(--success-color);
+	color: #fff;
+	border-radius: 3px;
+}
+
+.card button .click-message {
+	margin-top: 10px;
+	font-size: 0.9em;
+	color: var(--secondary-color);
+}
