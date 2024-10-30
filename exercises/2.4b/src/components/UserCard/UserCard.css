@@ -1,0 +1,32 @@
+.user-card {
+	background-color: var(--light-color);
+	color: var(--dark-color);
+	padding: 20px;
+	margin: 10px;
+	border-radius: 5px;
+	width: 300px;
+	text-align: center;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-card h3 {
+	margin: 0;
+	font-size: 1.5em;
+	color: var(--primary-color);
+}
+
+.user-card h4 {
+	margin: 10px 0;
+	font-size: 1.2em;
+	color: var(--secondary-color);
+}
+
+.user-card .online {
+	color: var(--success-color);
+	font-weight: bold;
+}
+
+.user-card .offline {
+	color: var(--danger-color);
+	font-weight: bold;
+}

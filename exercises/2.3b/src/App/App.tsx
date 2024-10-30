@@ -1,6 +1,6 @@
-import Header from "./Header";
-import { Main, User } from "./Main/index";
-import Footer from "./Footer";
+import Header from "../Header";
+import { Main, User } from "../Main/index";
+import Footer from "../Footer";
 
 const App = () => {
 	const title = "Welcome to My App";

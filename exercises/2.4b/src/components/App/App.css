@@ -1,0 +1,33 @@
+body {
+	font-family: Arial, sans-serif;
+	background-color: var(--dark-color);
+	color: var(--dark-color);
+	margin: 0;
+	padding: 0;
+}
+
+.app-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+}
+
+.user-card {
+	background-color: var(--primary-color);
+	color: var(--light-color);
+	padding: 20px;
+	margin: 10px;
+	border-radius: 5px;
+	width: 300px;
+	text-align: center;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-card.online {
+	background-color: var(--success-color);
+}
+
+.user-card.offline {
+	background-color: var(--secondary-color);
+}
