@@ -1,10 +1,12 @@
 import Cinema from "../Cinema";
-import PageTitle from "../PageTitle";
+import Footer from "../Footer";
+import logo from "../../assets/images/Kontu.png";
+import Header from "../Header";
 
 const App = () => {
-	const pageTitle = "Informations sur les films dans les cinémas";
 
 	const cinema1Name = "UGC DeBrouckère";
+	const pageTitle = "Informations sur les films dans les cinémas";
 
 	const moviesCinema1 = [
 	{
@@ -47,16 +49,19 @@ const App = () => {
 	];
 
 
+
 	return (
-		<div>
-		<PageTitle title={pageTitle} />
+		<>
+			<Header title={pageTitle} url={logo} children={null}/>
 
-		<Cinema name={cinema1Name} movies= {moviesCinema1} />
+			<Cinema name={cinema1Name} movies= {moviesCinema1} />
 
-		<Cinema name={cinema2Name} movies={moviesCinema2} />
-		</div>
+			<Cinema name={cinema2Name} movies={moviesCinema2} />
+
+			<Footer ownerName="Arthur D." year={2024} url={logo} children={null} />
+		</>
 	);
-	};
+};
 
 
 export default App;

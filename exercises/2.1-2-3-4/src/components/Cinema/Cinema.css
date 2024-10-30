@@ -1,0 +1,28 @@
+.cinema {
+	background-color: var(--light-color);
+	padding: 20px;
+	margin: 20px 0;
+	border: 1px solid var(--secondary-color);
+	border-radius: 5px;
+}
+
+.cinema h2 {
+	margin: 0;
+	font-size: 1.8em;
+	color: var(--dark-color);
+}
+
+.cinema ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.cinema li {
+	margin: 10px 0;
+	font-size: 1.2em;
+	color: var(--secondary-color);
+}
+
+.cinema li strong {
+	color: var(--primary-color);
+}
