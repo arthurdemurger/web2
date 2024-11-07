@@ -2,7 +2,9 @@ import FilmMenu from '../FilmMenu'
 import { Film } from '../../types'
 import { SyntheticEvent, useState } from 'react'
 
-const film_1 = {	title:"The Shawshank Redemption",
+const film_1 = {
+	id: 1,
+	title:"The Shawshank Redemption",
 	director:"Frank Darabont",
 	duration:142,
 	imageUrl:"src/assets/img/zushi.jpg",
@@ -10,7 +12,9 @@ const film_1 = {	title:"The Shawshank Redemption",
 	budget:25
 };
 
-const film_2 = {	title:"The Godfather",
+const film_2 = {
+		id: 2,
+		title:"The Godfather",
 		director:"Francis Ford Coppola",
 		duration:175,
 		imageUrl:"src/assets/img/zushi.jpg",
@@ -18,7 +22,9 @@ const film_2 = {	title:"The Godfather",
 		budget:6
 	};
 
-const film_3 = {	title:"The Dark Knight",
+const film_3 = {
+		id: 3,
+		title:"The Dark Knight",
 		director:"Christopher Nolan",
 		duration:152,
 		imageUrl:"src/assets/img/zushi.jpg",
@@ -42,6 +48,7 @@ const Main = () => {
 		e.preventDefault();
 		console.log("submit :", title, director, duration, imageUrl, description, budget);
 		const newFilm = {
+			id: nextFilmId(films),
 			title: title,
 			director: director,
 			duration: duration,
@@ -148,6 +155,10 @@ const Main = () => {
 			</div>
 		</main>
 	);
+};
+
+const nextFilmId = (films: Film[]) => {
+	return films.reduce((maxId, film) => Math.max(maxId, film.id), 0) + 1;
 };
 
 export default Main;
