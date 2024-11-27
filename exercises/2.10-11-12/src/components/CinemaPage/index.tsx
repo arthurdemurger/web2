@@ -1,5 +1,5 @@
 import './Cinema.css';
-import Movie from '../Movie';
+import Movie from './movie';
 import { MovieContext } from '../../types';
 import { CinemaProps } from '../../types';
 import { useOutletContext } from 'react-router-dom';

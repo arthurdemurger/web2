@@ -5,7 +5,6 @@ import { MovieContext } from "../../types";
 const MovieListPage = () => {
 	const { movies }: MovieContext = useOutletContext();
 
-
 	return (
 		<main>
 			<table>

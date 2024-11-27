@@ -40,16 +40,14 @@ const Header = () => {
 }
 
 const NavBar = () => {
-
 	const navigate = useNavigate();
 
 	return (
 		<nav>
-				<button className="nav-button" onClick={() => navigate("/")}>Home</button>
-				<button className="nav-button" onClick={() => navigate("/cinema")}>Cinema</button>
-				<button className="nav-button" onClick={() => navigate("/movies")}>Movies</button>
-				<button className="nav-button" onClick={() => navigate("/add_movie")}>Add a
- movie</button>
+			<button className="nav-button" onClick={() => navigate("/")}>Home</button>
+			<button className="nav-button" onClick={() => navigate("/cinema")}>Cinema</button>
+			<button className="nav-button" onClick={() => navigate("/movies")}>Movies</button>
+			<button className="nav-button" onClick={() => navigate("/add_movie")}>Add a movie</button>
 		</nav>
 	);
 };
@@ -64,7 +62,7 @@ const App = () => {
 	const [movies, setMovies] = useState(defaultMovies);
 
 	const addMovie = (newMovie: MovieProps) => {
-		const movieAdded = { ...newMovie, id: nextMovieId(movies)};
+		const movieAdded = { ...newMovie, id: nextMovieId(movies) };
 		setMovies([...movies, movieAdded]);
 	}
 
@@ -74,13 +72,14 @@ const App = () => {
 		movies
 	};
 
-
 	return (
-		<div>
+		<div id="root">
 			<Header />
+			<main>
 				<Outlet context={movieContext} />
+			</main>
 			<Footer />
-	</div>
+		</div>
 	)
 };
 

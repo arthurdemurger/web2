@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './Movie.css';
+import './Cinema.css';
 import { MovieProps } from '../../types';
 
 const Movie = ({ title, director, description }: MovieProps) => {

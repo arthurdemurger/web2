@@ -2,10 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import HomePage from "./components/HomePage";
 import CinemaPage from "./components/CinemaPage";
+import MoviePage from "./components/MoviePage";
 import MovieListPage from "./components/MovieListPage";
 import AddMoviePage from "./components/AddMoviePage";
 import App from "./components/App";
-
 import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
@@ -16,20 +16,24 @@ const router = createBrowserRouter([
 		children: [
 			{
 				path: "",
-				element: <HomePage />,
+				element: <HomePage />
 			},
 			{
 				path: "/cinema",
-				element: <CinemaPage />,
+				element: <CinemaPage />
 			},
 			{
 				path: "/movies",
-				element: <MovieListPage />,
+				element: <MovieListPage />
 			},
 			{
 				path: "/add_movie",
-				element: <AddMoviePage />,
+				element: <AddMoviePage />
 			},
+			{
+				path: "/movie_details/:id",
+				element: <MoviePage />
+			}
 		],
 	},
 ]);
