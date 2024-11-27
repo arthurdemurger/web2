@@ -10,6 +10,7 @@ const defaultMovies: Movie[] = [
 		title: "The Shawshank Redemption",
 		director: "Frank Darabont",
 		duration: 142,
+		imageUrl: "https://upload.wikimedia.org/wikipedia/en/8/81/ShawshankRedemptionMoviePoster.jpg",
 		description: "Two imprisoned",
 		budget: 25
 	},
@@ -18,6 +19,7 @@ const defaultMovies: Movie[] = [
 		title: "The Godfather",
 		director: "Francis Ford Coppola",
 		duration: 175,
+		imageUrl: "https://upload.wikimedia.org/wikipedia/en/1/1c/Godfather_ver1.jpg",
 		description: "An organized crime",
 		budget: 6
 	},
@@ -26,9 +28,10 @@ const defaultMovies: Movie[] = [
 		title: "The Dark Knight",
 		director: "Christopher Nolan",
 		duration: 152,
+		imageUrl: "https://upload.wikimedia.org/wikipedia/en/1/1c/Godfather_ver1.jpg",
 		description: "When the menace",
 		budget: 185
-	}
+	},
 ];
 
 const Header = () => {

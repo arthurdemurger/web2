@@ -25,7 +25,7 @@ const MovieListPage = () => {
 						<td>{movie.title}</td>
 						<td>{movie.director}</td>
 						<td>{movie.duration}</td>
-						<td><img src="/src/assets/img/zushi.jpg" alt="movie_image"></img></td>
+						<td><img src={movie.imageUrl} alt="movie_image" width="100" height="150"></img></td>
 						<td>{movie.description}</td>
 						<td>{movie.budget}</td>
 					</tr>
