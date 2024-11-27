@@ -17,5 +17,15 @@ interface MovieProps {
 	budget?: number;
 }
 
-export type {Movie};
-export type {MovieProps};
+interface MovieContext {
+	movies: Movie[];
+	setMovies: (movies: Movie[]) => void;
+	addMovie: (newMovie: MovieProps) => void;
+};
+
+interface CinemaProps {
+	name: string;
+	movies: MovieProps[];
+}
+
+export type {Movie, MovieProps, MovieContext, CinemaProps};
