@@ -1,10 +1,7 @@
 import { useEffect, useState } from "react";
-import "./Image.css"
+import "./DogImage.css"
 
-interface ImageProps {
-	imageKey: string;
-}
-const Image = ({ imageKey }: ImageProps) => {
+const DogImage = () => {
 	const [image, setImage] = useState("");
 
 	useEffect(() => {
@@ -23,11 +20,17 @@ const Image = ({ imageKey }: ImageProps) => {
 		}
 
 		fetchDogs();
-	}, [imageKey]);
+
+		const interval = setInterval(() => {
+			fetchDogs();
+		}, 5000);
+
+		return () => clearInterval(interval);
+	}, []);
 
 	return (
 		<img src={image} alt="Dog" className="image" />
 	);
 };
 
-export default Image;
+export default DogImage;
