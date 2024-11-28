@@ -1,0 +1,53 @@
+/* Styles généraux pour le tableau */
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 20px 0;
+	font-size: 1rem;
+	text-align: left;
+}
+
+thead tr {
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+}
+
+th, td {
+	padding: 12px;
+	border: 1px solid #ddd;
+}
+
+/* Alternance de couleur pour les lignes du tableau */
+tbody tr {
+	background-color: #f9f9f9;
+}
+
+/* Style des images */
+td img {
+	width: 80px; /* Largeur uniforme */
+	height: 80px; /* Hauteur uniforme */
+	object-fit: cover; /* Recadre l'image pour remplir la zone définie */
+	border-radius: 5px; /* Coins arrondis pour un style plus moderne */
+}
+
+/* Styles de la première ligne */
+th {
+	font-weight: bold;
+	padding: 12px;
+}
+
+/* Ajustements pour rendre le texte plus lisible */
+td {
+	color: #333;
+}
+
+/* Style des titres et descriptions pour les démarquer */
+td:nth-child(1) { /* Titre */
+	font-weight: bold;
+}
+
+td:nth-child(5) { /* Description */
+	color: #666;
+	font-size: 0.9rem;
+}
