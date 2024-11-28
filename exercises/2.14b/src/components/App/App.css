@@ -1,0 +1,42 @@
+#root {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 2rem;
+	text-align: center;
+}
+
+.image-container {
+	display: flex;
+	flex-direction: column;
+	/* Stack the "images" container and button vertically */
+	align-items: center;
+	/* Center everything horizontally */
+	padding: 2rem;
+}
+
+.images {
+	display: flex;
+	/* Display images horizontally */
+	justify-content: center;
+	/* Center images horizontally */
+	gap: 2rem;
+	/* Add space between images */
+}
+
+button {
+	margin-top: 2rem;
+	/* Space between images and button */
+	padding: 0.5rem 1rem;
+	font-size: 1rem;
+	border: none;
+	background-color: #646cff;
+	color: white;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+button:hover {
+	background-color: #5555cc;
+	/* Slightly darker blue on hover */
+}
