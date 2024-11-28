@@ -35,29 +35,61 @@ const App = () => {
 	const [pizzas, setPizzas] = useState<Pizza[]>([]);
 
 	useEffect(() => {
-		const fetchPizzas = async () => {
-			try {
-				const response = await fetch("http://localhost:3000/pizzas");
-
-				if (!response.ok)
-					throw new Error(`fetch error : ${response.status} : ${response.statusText}`);
-
-				const pizzas = await response.json();
-				setPizzas(pizzas);
-			}
-			catch (err) {
-				console.error("HomePage::error: ", err);
-			}
-		}
-
 		fetchPizzas();
 	}, []);
 
+	const fetchPizzas = async () => {
+		try {
+			const pizzas = await getAllPizzas();
+			setPizzas(pizzas);
+		} catch (err) {
+			console.error("HomePage::error: ", err);
+		}
+	};
+
+	async function getAllPizzas() {
+		try {
+			const response = await fetch("http://localhost:3000/pizzas");
+
+			if (!response.ok)
+				throw new Error(
+					`fetch error : ${response.status} : ${response.statusText}`
+				);
+
+			const pizzas = await response.json();
+
+			return pizzas;
+		} catch (err) {
+			console.error("getAllPizzas::error: ", err);
+			throw err;
+		}
+	}
 
 
-	const addPizza = (newPizza: NewPizza) => {
-		const pizzaAdded = { ...newPizza, id: nextPizzaId(pizzas) };
-		setPizzas([...pizzas, pizzaAdded]);
+
+	const addPizza = async (newPizza: NewPizza) => {
+		try {
+			const options = {
+				method: "POST",
+				body: JSON.stringify(newPizza),
+				headers: {
+					"Content-Type": "application/json",
+				},
+			};
+
+			const response = await fetch("http://localhost:3000/pizzas", options);
+
+			if (!response.ok)
+				throw new Error(
+					`fetch error : ${response.status} : ${response.statusText}`
+				);
+
+			const createdPizza = await response.json();
+
+			setPizzas([...pizzas, createdPizza]);
+		} catch (err) {
+			console.error("AddPizzaPage::error: ", err);
+		}
 	};
 
 	const handleHeaderClick = () => {
@@ -92,11 +124,6 @@ const App = () => {
 			<Footer />
 		</div>
 	);
-};
-
-const nextPizzaId = (pizzas: Pizza[]) => {
-	const ids = pizzas.map((pizza) => pizza.id);
-	return Math.max(...ids) + 1;
 };
 
 export default App;
