@@ -5,7 +5,8 @@ function App() {
 	const [joke, setJoke] = useState("");
 
 	useEffect(() => {
-		fetch("https://v2.jokeapi.dev/joke/Any?type=single")
+		const interval = setInterval(() => {
+			fetch("https://v2.jokeapi.dev/joke/Any?type=single")
 			.then((response) => {
 				if (!response.ok)
 					throw new Error(`fetch error : ${response.status} : ${response.statusText}`);
@@ -15,7 +16,9 @@ function App() {
 			.catch((err) => {
 				console.error("Homepage::error: ", err)
 			}
-			);
+		);
+		}, 10000);
+		return () => clearInterval(interval);
 	}, []);
 
 	return (
